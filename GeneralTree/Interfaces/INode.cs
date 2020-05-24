@@ -2,11 +2,11 @@
 
 namespace GeneralTree.Interfaces
 {
-    public interface INode<T>
+    public interface INode<T> : IVisitable
     {
         int Id { get; set; }
         T Payload { get; set; }
         INode<T> Parent { get; set; }
-        IEnumerable<INode<T>> Children { get; set; }
+        IList<INode<T>> Children { get; set; }
     }
 }
