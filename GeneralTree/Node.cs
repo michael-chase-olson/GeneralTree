@@ -13,6 +13,10 @@ namespace GeneralTree
         public int Id { get; set; }
         public T Payload { get; set; }
         public INode<T> Parent { get; set; }
-        public IEnumerable<INode<T>> Children { get; set; }
+        public IList<INode<T>> Children { get; set; }
+        public void Accept(IVisitor visitor)
+        {
+            visitor.Visit(this);
+        }
     }
 }
