@@ -1,4 +1,6 @@
-﻿namespace GeneralTree.Interfaces
+﻿using GeneralTree.TraversalStrategies;
+
+namespace GeneralTree.Interfaces
 {
     public interface ISearchableTree<T>
     {
